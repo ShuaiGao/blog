@@ -64,6 +64,45 @@ The following companies and organizations have participated in the development o
 以下公司和组织参与了本标准的制定，并感谢他们的贡献：Eiffel Software、Kahu Research、Microsoft Corporation、Novell Corporation、Twin Roots。 对于以前的版本，以下公司和组织也得到认可：Borland、富士通软件公司、惠普、英特尔公司、IBM 公司、哥本哈根 IT 大学、Jagger Software Ltd.、莫纳什大学、Netscape、Phone.Com、Plum Hall 和 Sun 微系统。
 
 
+## 1 Scope
+
+The International Standard defines the Common Language Infrastructure(CLI) in whick applications written in multiple high-level languages can bue executed in different system environments without the need to rewrite those applications to take into consideration the unique characteristics of those environments. This International Stansard consists of the following parts:
+
+国际标准定义了公共语言基础设施 (CLI)，其中以多种高级语言编写的应用程序可以在不同的系统环境中执行，而无需重写这些应用程序以考虑这些环境的独特特性。 本国际标准由以下部分组成：
+
+- Partition Ⅰ: Concepts and Architecture - Describes the overall architecture of the CLI, and provides the normative description of the Common Type System(CTS), the Virtual Execution System(VES), and the Common Language Specification(CLS). It also provides an informative description of the metadata.
+
+- 第一部分：概念和架构 - 描述 CLI 的整体架构，并提供通用类型系统（CTS）、虚拟执行系统（VES）和通用语言规范（CLS）的规范性描述。 它还提供了元数据的信息描述。
+
+
+- Partition Ⅱ: Metadata Definition and Semantics - Provides the normative description of the metadata: its physical layout(as a file format), its logical content(as a set of tables and their relations ship), and its semantics( as seen from a hypothetical assembler, ilasm).
+
+- 第二部分：元数据定义和语义——提供元数据的规范描述：它的物理布局（作为一种文件格式），它的逻辑内容（作为一组表及其关系），它的语义（从一个假设的角度来看） 汇编程序，伊斯兰教）。
+
+
+- Partition Ⅲ: CIL Instruction Set - Describes the Common Intermediate Language(CLI) instruction set.
+
+- Partition IV: Profiles and Libraries - Provides and overview of the CLI Libraries, and a specification of their factoring into Profiles and Libraries. A companion file, CLILibrary.xml, considered to be part of this Partition, but distributed in XML format, provides details of each class, value type, and interface in the CLI Libraties.
+
+- 第 IV 部分：配置文件和库 - 提供和概述 CLI 库，以及将它们分解为配置文件和库的规范。 伴随文件 CLILibrary.xml 被认为是此分区的一部分，但以 XML 格式分发，提供 CLI 库中每个类、值类型和接口的详细信息。
+
+- Partition Ⅴ: Debug Interchange Format - Describes a standard way to interchange debugging information between CLI producers and consumers.
+
+- Partition Ⅵ: Annexes - Contains some sample programs written in CLI Assembly Language(ILAssm), information about a particular implementation of an assembler, a machine-readable descripton of the CIL instruction set which can be used to derive parts of the grammar used by this assembler as well as other tools that manipulate CIL, a set of guidelines used in the design of the libraries of Partition IV, and portability considerations.
+
+## 2 Conformance
+
+A system claiming conformance to this International Standard shall implement all the normative requirements of this standard, and shall specify the profile( see Patrion Ⅳ Library - Profiles) that it implements. Ths minimal implementations is the Kernel Profile. A conforming implementation can also include additional functionality provided that functionality does not prevent running code written to rely solely on the profile as specified in this standard. For example, a conforming implementation can provide additional classes, new methods on existing classes, or a new interface on a standardized class, but it shall not add methods or properties to interfaces specified in this standard.
+
+A compiler that generates Common Intermediate Language(CIL, see Partition Ⅲ) and claims conformance to this International Standard shall produce output files in the format specified in this standard, and this CIL it generates shall be correct CIL as specified in this standard. Such a compiler can also chaim that it generates verifiable code, in which case, the CIL it generates shall be verifiable as specified in this standard.
+
+## 4 Conventions 约定
+
+### 4.1 Orfanization
+
+The divisons of this International Standard are organized using a hierarchy. At the top level is the `Partition`. The next level is `clause`, followed by `subclause`. Divisions within a subclause are alse referred to as subclauses. Partitions are numbered using Roman numerals. All other divisions are numbered using Arabic digits with their plave in hierarchy indicated by nested numbers. For example, Partion Ⅱ, 14.4.3.2 refers to subclause 2 in subclause 3 in subclause 4 in clause 14 in Partition Ⅱ.
+
+本国际标准的各部分使用层次结构进行组织。
 
 ### 1.4 English description
 
