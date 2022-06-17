@@ -104,6 +104,105 @@ The divisons of this International Standard are organized using a hierarchy. At 
 
 本国际标准的各部分使用层次结构进行组织。
 
+
+## 5 Terms and definitions
+
+For the purposes of this International Standard, the following definitions apply. Other terms are defines where the appear in `italic` type.
+
+为本国际标准的目的，下列定义适用。 其他术语定义了以“斜体”类型出现的位置。
+
+**ANSI character:** A character from an implementation-defined 8-bit character set whose first 128 code points correspond exactly to those of ISO/IEC 10646.
+
+**ANSO string:** A string of ANSI characters, of which the final character has the value all-bits-zero.
+
+**argument:** The expression supplied for a parameter at the point of the call to a method.
+
+**assembly:** A configured set of loadable code modules and other resources that together implement a unit of functionality.
+
+**attribute:** A characteristic of a type and/or its menbers that contains descriptive information. While the most common attributes are predefined, and have a specific encoding in the metadata associated with then, userdefined attributes can also be added to the metadata.
+
+**behavior, implementation-specific:** Unspecified behavior, for which each implementation is required to document the choice it makes.
+
+**behavior, unspecified:** Behavior, for a well-formed program construct and correct data, that depends on the implementation. The implementation is not required to document which behavior occurs.
+
+**behavior, undefined:** Behavior, such as might arise upon use of an erroneous program construct or erroneous data, for which this International Standard imposes no requirements. Undefined behavior can also be expected in cases when this International Standard omits the description of any explicit definition of vehavior.
+
+**boxing:** The conversion of a value having some value type, to a newly allocated instance of the reference type `System.Object`.
+
+将具有某种值类型的值转换为引用类型“System.Object”的新分配实例。
+
+**Common Intermediate Language(CIL):** The instruction set understood by the VES.
+
+**Common Language Infrastructure(CLI):** A specification for the format of executable code, and the runtime environment that can execute the code.
+可执行代码格式的规范，以及可执行代码的运行时环境。
+
+**Common Type System(CTS):** A unified type system that is shared by compilers, tools, and the CLI itself. It is the model that defines the rules the CLI follows when declaring, using and managing types. The CTS established a framework that enables cross-language integration, type safety, and high performance code execution.
+
+**delegate:** A reference type such that an instance of it can encapsulate one or more methods in an invocation list. Given a delegate instance and an appropriate set of arguments, one can invoke all of the methods in a delegate's invocation list with that set of arguments.
+
+**event:** A member that enables an object or class ro provide notifications.
+
+**Execution Engine:** See Virtual Execution System.
+
+**field:** A member that designates a typed memory location that stores some data in a program
+
+**garbage collection:** The process by which memory for managed data is allocated and released.
+
+**generic argument:** The actual type used to instantiate a particular generic type or generic method. For example in `List<string>, string` is the generic argument corresponding to the generic parameter T in the generic type definition `List<T>`.
+
+**generic parameter:** A parameter within the definition of a generic type or generic method that acts as a place holder for a generic argument. For example, in the generic type definition `List<T>`, T is a generic parameter.
+
+**generics:** The feature that allows types and methods to be defined such that they are parameterized with one or more generic parameters.
+
+**library:** A repository for a set of types, which are grouped into one or more assemblies. A library can also contain medifications to types defined in other libraries. For example, A library can include additional methods, interfaces, and exceptions for types defined in other libraries.
+
+**signature:** The part of a contract that can be checked and automativally enforced. Signatures are formed by adding constraints to types and other signatures. A constraint is a limitation on the use of or allowed operations on a value or location.
+
+**type,generic:**A type whose definition is parameterized by one or more other types; for example, `List<T>` where T is a generic parameter. The CLI supports the creation and use of instances of generic types. For example, List<int32> or List<string>.
+
+**type,reference:** A type such that an instance of it contains a reference to its data.
+
+**type, value:**A type such that an instance of it directly contains all its data.
+
+**unboxing:** The conversion of a value having type `System.Object`, whose run-time type is a value type, to a value type instance.
+
+**unmanaged code:** Code that is not managed.
+
+**unmanaged data:** Data that is not managed.
+
+**value:** A simple bit pattern for something like an integer of a float. Each value has a type that describes both the storage that it occupies and the meanings of the bits in its representation, and also the operations that can be performed on that representation. Values are intended for representing the simple types and non-objects in preogramming languages.
+
+**verification:** The checking of both CIL and its related metadata to ensure that the CIL code sequences do not permit any access to memory outside the program's logical address space. In conjunction with the calidation tests, verification ensures that the program cannot access memory or other resources to which it is not granted access.
+
+**Virtual Execution System(VES):** This system implements and enforces the CTS model. The VES is reponsible for loading and running programs written for the CLI. It provides the services needed to execute managed code and data using the metadata to connect separately generated modules together at runtime. The VES is also know as the Execution Engine.
+
+
+### 6 Overview of the Common Language Infrastructure
+
+The Common Landuage Infrastructure(CLI) provides a specification for executable code and the execution environment(the Virtual Execution System) in which it runs. Executable code is presented to the VES as modules. A module is a signle file containing executable content in the format specified in Partition Ⅱ-Security.
+
+The remainder of this clause and its subclauses contain only informative text
+
+At the center of the CLI is a unified type system, the Common Type System that is shared by compilers, tools, and the CLI itself. It is the model that defines the rules the CLI follows when declaring, using and managing types. The CTS established a framework that enables cross-language integration, type safety, and high performance code execution. This clause describes the architechure of the CLI by describing the CTS.
+
+**The Common Type System(CTS)**--The CTS provides a rich type system that supports the types and operations found in many programming languages. The CTS is intended to support the complete implementation of a wide range of programming languages. See $8
+
+**Metadata**--The CLI uses metadata to describe and reference the types defined by the CTS. Metadata is stored(that is, persisted) in a way that is independent of any particular programming language. Thus metadata provides a common interchange mechanism for use between tools (such as compilers and debuggers) that manipulate programs, as well as between these tools and the VES. See $9.
+
+**The Common Language Specification(CLS)**--The CLS is and agreement between language designers and framework(that is, class library) designers. It specifies a subset of the CTS and a set of usage conventions. Languages provide their users the greatest ability to access frameworks by implementing at least those parts of the CTS that are part of the CLS. Similarly, raame works will be most widely used if their publicly exportedaspect(e.g., classed, interfaces, methods, and fields) use only types that are part of the CLS and that adhere to the CLS conventions. See $10.
+
+**The Virtual Execution System(VES)**-- The Ves implements and enforces the CTS model. The VES is responsible for loading and running programs written for the CLI. It provides the services needed to execute managed code and data, using the metadata to connect separately generated modules together at runtime(late binding). See $1.2
+
+Together, these aspects of the CLI from a unifying infrastructure for designing, developing, deploying, and executing distributed components and applications. The appropriate subset of the CTS is available from each programming language that targets the CLI. Language-based tools communicate with each other and with the VES using metadata to define and reference the types used to construct the application. The VES uses the metadata to create instance of the types as needed and to provide data type information to other parts of the infrastructure(such ad remoting services, assembly downloading, and security).
+
+### 6.1 Relationship to type safety
+
+Type safety is usually discussed in terms of whar id does(e.g., guaranteeing encapsulation between different objects) or in terms of what it prevents(e.g, memory corruption by writing where one shouldn't). However, from the point of view of thw CTS, type safety guarantees that:
+
+**References are what they say they are** - Every reference is typed, the object or value referenced alse has a type, and these types are assignement compatible(see $8.7).
+
+**Indentities are who they say they are** - There is no way to corrupt or spoof an object, and by implication, a user or security domain. Access to an object is through accessible functions and fields. An object can still be designed in such a way that security is compromised. However, a local analysis of the class, its methods, and the things it uses, as openosed to a global analysis of all uses of a class, is sufficient to assess the vulnerabilities.
+
 ### 1.4 English description
 
 The English description describes any details about the instructions that are not immediately apparent once the format and stack transition have been described.
