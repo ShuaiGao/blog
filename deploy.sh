@@ -12,20 +12,10 @@ cd docs/.vuepress/dist
 # deploy to github pages
 #echo 'b.xugaoyi.com' > CNAME
 
-echo "test log" $GITHUB_TOKEN
-echo "test log" $ACCESS_TOKEN
-
-if [ -z "$GITHUB_TOKEN" ]; then
-  echo "test log 11111"
-  msg='deploy'
-  githubUrl=git@github.com:ShuaiGao/blog.git
-else
-  echo "test log 22222"
-  msg='来自github actions的自动部署'
-  githubUrl=https://ShuaiGao:${GITHUB_TOKEN}@github.com/ShuaiGao/blog.git
-  git config --global user.name "ShuaiGao"
-  git config --global user.email "597449675@qq.com"
-fi
+msg='来自github actions的自动部署'
+githubUrl=https://ShuaiGao:${GITHUB_TOKEN}@github.com/ShuaiGao/blog.git
+git config --global user.name "ShuaiGao"
+git config --global user.email "597449675@qq.com"
 git init
 git add -A
 git commit -m "${msg}"
