@@ -26,11 +26,12 @@ jobs:
               uses: actions/setup-node@v1 # 作用：安装nodejs
               with:
                   node-version: ${{ matrix.node-version }} # 版本
-            - name: run deploy.sh # 步骤3
+            - name: build & deploy # 步骤3
               #env: # 设置环境变量
               #GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
               #CODING_TOKEN: ${{ secrets.CODING_TOKEN }}
               run: |
+                  remote_addr=`git remote get-url --push origin`
                   commit_info=`git describe --all --always --long`
                   user_name=`git log -1 --pretty=format:'%an'`
                   user_email=`git log -1 --pretty=format:'%ae'`
@@ -38,12 +39,22 @@ jobs:
                   echo ${user_email}
                   npm install
                   npm run build
+                  echo "cd dist"
                   cd docs/.vuepress/dist
+                  echo "git config"
+                  git config --global init.defaultBranch pages
+                  echo "git init"
                   git init
+                  echo "git user name"
+                  git config user.name ${user_name}
+                  echo "git user email"
                   git config user.name ${user_name}
                   git config user.email ${user_email}
+                  echo "git add"
                   git add -A
+                  echo "git commit"
                   git commit -m "auto deploy, $commit_info"
+                  echo "git addr"
                   remote_addr=`echo $remote_addr | awk -F'://' '{print $2}'`
                   echo ${remote_addr}
                   remote_addr=https://${user_name}:${{secrets.GITHUB_TOKEN}}@${remote_addr}
