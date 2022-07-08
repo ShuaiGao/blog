@@ -34,6 +34,8 @@ jobs:
                   commit_info=`git describe --all --always --long`
                   user_name=`git log -1 --pretty=format:'%an'`
                   user_email=`git log -1 --pretty=format:'%ae'`
+                  echo ${user_name}
+                  echo ${user_email}
                   npm install
                   npm run build
                   cd docs/.vuepress/dist
@@ -43,7 +45,9 @@ jobs:
                   git add -A
                   git commit -m "auto deploy, $commit_info"
                   remote_addr=`echo $remote_addr | awk -F'://' '{print $2}'`
+                  echo ${remote_addr}
                   remote_addr=https://${user_name}:${{secrets.GITHUB_TOKEN}}@${remote_addr}
+                  echo ${remote_addr}
                   git remote add origin ${remote_addr}
                   git push origin HEAD:pages --force
 
