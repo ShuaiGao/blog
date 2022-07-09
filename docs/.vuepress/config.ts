@@ -64,14 +64,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 ],
             },
             {
-                text: "页面",
-                link: "/ui/",
-                items: [
-                    { text: "HTML", link: "/pages/8309a5b876fc95e3/" },
-                    { text: "CSS", link: "/pages/0a83b083bdf257cb/" },
-                ],
-            },
-            {
                 text: "技术",
                 link: "/technology/",
                 items: [
@@ -166,7 +158,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         ],
         sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
         logo: "/img/logo.png", // 导航栏logo
-        repo: "xugaoyi/vuepress-theme-vdoing", // 导航栏右侧生成Github链接
+        repo: "ShuaiGao", // 导航栏右侧生成Github链接
         searchMaxSuggestions: 10, // 搜索结果显示最大数
         lastUpdated: "上次更新", // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
         docsDir: "docs", // 编辑的文件夹
@@ -213,13 +205,13 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
         // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
         author: {
-            name: "xugaoyi", // 必需
-            link: "https://github.com/xugaoyi", // 可选的
+            name: "Dongua", // 必需
+            link: "https://github.com/shuaigao", // 可选的
         },
 
         // 博主信息 (显示在首页侧边栏)
         blogger: {
-            avatar: "https://cdn.jsdelivr.net/gh/xugaoyi/image_store/blog/20200103123203.jpg",
+            avatar: "https://tyimage.tuyoo.com/8751a21462/img/lufei.jpg",
             name: "Dongua",
             slogan: "冬瓜冬瓜",
         },
@@ -231,12 +223,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 {
                     iconClass: "icon-youjian",
                     title: "发邮件",
-                    link: "mailto:894072666@qq.com",
+                    link: "mailto:597449675@qq.com",
                 },
                 {
                     iconClass: "icon-github",
                     title: "GitHub",
-                    link: "https://github.com/xugaoyi",
+                    link: "https://github.com/shuaigao",
                 },
                 {
                     iconClass: "icon-erji",
@@ -248,8 +240,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
         // 页脚信息
         footer: {
-            createYear: 2019, // 博客创建年份
-            copyrightInfo: 'Evan Xu | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签或换行标签</br>
+            createYear: 2022, // 博客创建年份
+            copyrightInfo: 'Dongua | <a href="https://github.com/ShuaiGao/shuaigao.github.io/main/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签或换行标签</br>
         },
 
         // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
@@ -267,6 +259,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
     head: [
         ["link", { rel: "icon", href: "/img/favicon.ico" }], //favicons，资源放在public文件夹
+        ["link", { rel: "stylesheet", href: "//at.alicdn.com/t/font_3114978_qe0b39no76.css" }],
         [
             "meta",
             {
@@ -289,6 +282,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 插件配置
     plugins: <UserPlugins>[
         "vuepress-plugin-baidu-autopush", // 百度自动推送
+        {
+            name: "custom-plugins",
+            globalUIComponents: ["BlockToggle"], // 2.x 版本 globalUIComponents 改名为 clientAppRootComponentFiles
+        },
 
         [
             "vuepress-plugin-baidu-tongji", // 百度统计
