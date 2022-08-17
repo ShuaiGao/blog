@@ -103,8 +103,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 text: "docker",
                 link: "/docker/",
                 items: [
-                    { text: "服务管理", link: "/docker/service/" },
-                    { text: "docker hub", link: "/docker/docker_hub/" },
+                    { text: "服务管理", link: "/docker/service" },
+                    { text: "docker hub", link: "/docker/docker_hub" },
                 ],
             },
             {
