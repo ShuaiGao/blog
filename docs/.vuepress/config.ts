@@ -15,7 +15,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     locales: {
         "/": {
             lang: "zh-CN",
-            title: "Dongua's blog",
+            title: "'s blog",
             description: "记录学习工作重要知识理论，执于笔下，记于心间，相信会越来越好！",
         },
     },
@@ -71,67 +71,71 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 text: "技术",
                 link: "/technology/",
                 items: [
-                    { text: "技术文档", link: "/pages/9a7ee40fc232253e/" },
-                    { text: "GitHub技巧", link: "/pages/4c778760be26d8b3/" },
-                    { text: "Nodejs", link: "/pages/117708e0af7f0bd9/" },
-                    { text: "博客搭建", link: "/pages/41f87d890d0a02af/" },
+                    { text: "golang", link: "/golang/" },
+                    { text: "DB", link: "/db/" },
+                    // { text: "分布式", link: "/distributed/" },
+                    { text: "其他", link: "/server/" },
+                    // { text: "技术文档", link: "/pages/9a7ee40fc232253e/" },
+                    // { text: "GitHub技巧", link: "/pages/4c778760be26d8b3/" },
+                    // { text: "Nodejs", link: "/pages/117708e0af7f0bd9/" },
+                    // { text: "博客搭建", link: "/pages/41f87d890d0a02af/" },
                 ],
             },
-            {
-                text: "服务端",
-                link: "/server/",
-                items: [
-                    { text: "nginx", link: "/server/nginx/" },
-                    { text: "mysql安装", link: "/server/mysql/" },
-                    { text: "vim", link: "/server/vim/" },
-                ],
-            },
-            {
-                text: "golang",
-                link: "/golang/",
-                items: [
-                    { text: "gomod", link: "/golang/gomod/" },
-                    { text: "compile", link: "/golang/compile/" },
-                    { text: "protobuf", link: "/golang/protobuf/" },
-                ],
-            },
-            {
-                text: "DB",
-                link: "/db/",
-                items: [
-                    { text: "mysql", link: "/db/mysql/" },
-                    { text: "mongodb", link: "/db/mongodb/" },
-                    { text: "redis", link: "/db/redis/" },
-                ],
-            },
-            {
-                text: "分布式",
-                link: "/distributed/",
-                items: [
-                    { text: "理论", link: "/distributed/theory/" },
-                    { text: "事务", link: "/distributed/transaction/" },
-                    { text: "MESI", link: "/distributed/mesi/" },
-                ],
-            },
-            {
-                text: "linux",
-                link: "/linux/",
-                items: [
-                    { text: "diectory", link: "/linux/diectory/" },
-                    { text: "shell", link: "/linux/shell/" },
-                ],
-            },
-            {
-                text: "更多",
-                link: "/more/",
-                items: [
-                    { text: "学习", link: "/pages/f2a556/" },
-                    { text: "面试", link: "/pages/aea6571b7a8bae86/" },
-                    { text: "心情杂货", link: "/pages/2d615df9a36a98ed/" },
-                    { text: "实用技巧", link: "/pages/baaa02/" },
-                    { text: "友情链接", link: "/friends/" },
-                ],
-            },
+            // {
+            //     text: "服务端",
+            //     link: "/server/",
+            //     items: [
+            //         { text: "nginx", link: "/server/nginx/" },
+            //         { text: "mysql安装", link: "/server/mysql/" },
+            //         { text: "vim", link: "/server/vim/" },
+            //     ],
+            // },
+            // {
+            //     text: "golang",
+            //     link: "/golang/",
+            //     items: [
+            //         { text: "gomod", link: "/golang/gomod/" },
+            //         { text: "compile", link: "/golang/compile/" },
+            //         { text: "protobuf", link: "/golang/protobuf/" },
+            //     ],
+            // },
+            // {
+            //     text: "DB",
+            //     link: "/db/",
+            //     items: [
+            //         { text: "mysql", link: "/db/mysql/" },
+            //         { text: "mongodb", link: "/db/mongodb/" },
+            //         { text: "redis", link: "/db/redis/" },
+            //     ],
+            // },
+            // {
+            //     text: "分布式",
+            //     link: "/distributed/",
+            //     items: [
+            //         { text: "理论", link: "/distributed/theory/" },
+            //         { text: "事务", link: "/distributed/transaction/" },
+            //         { text: "MESI", link: "/distributed/mesi/" },
+            //     ],
+            // },
+            // {
+            //     text: "linux",
+            //     link: "/linux/",
+            //     items: [
+            //         { text: "diectory", link: "/linux/diectory/" },
+            //         { text: "shell", link: "/linux/shell/" },
+            //     ],
+            // },
+            // {
+            //     text: "更多",
+            //     link: "/more/",
+            //     items: [
+            //         { text: "学习", link: "/pages/f2a556/" },
+            //         { text: "面试", link: "/pages/aea6571b7a8bae86/" },
+            //         { text: "心情杂货", link: "/pages/2d615df9a36a98ed/" },
+            //         { text: "实用技巧", link: "/pages/baaa02/" },
+            //         { text: "友情链接", link: "/friends/" },
+            //     ],
+            // },
             { text: "关于", link: "/about/" },
             {
                 text: "收藏",
@@ -201,15 +205,15 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
         // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
         author: {
-            name: "Dongua", // 必需
+            name: "子嘉", // 必需
             link: "https://github.com/shuaigao", // 可选的
         },
 
         // 博主信息 (显示在首页侧边栏)
         blogger: {
             avatar: "https://tyimage.tuyoo.com/8751a21462/img/lufei.jpg",
-            name: "Dongua",
-            slogan: "冬瓜冬瓜",
+            name: "子嘉",
+            slogan: "高子嘉",
         },
 
         // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social)
@@ -282,7 +286,24 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             name: "custom-plugins",
             globalUIComponents: ["BlockToggle"], // 2.x 版本 globalUIComponents 改名为 clientAppRootComponentFiles
         },
-
+        [
+            "vuepress-plugin-comment",
+            {
+                choosen: "gitalk",
+                options: {
+                    clientID: "31fac84d611ee9285a66",
+                    clientSecret: "1de0304d64962fe67c03b55129cd51ed5693cdc5",
+                    repo: "gitalk",
+                    owner: "ShuaiGao",
+                    admin: ["ShuaiGao"],
+                    distractionFreeMode: false,
+                    id: "<%- (window.location.origin + (frontmatter.to.path || window.location.pathname)).slice(-50) %>", //  页面的唯一标识,长度不能超过50
+                    title: "「评论」<%- document.title %>", // GitHub issue 的标题
+                    labels: ["Gitalk", "Comment"], // GitHub issue 的标签
+                    body: "<%- document.title %>：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>", // GitHub issue 的内容
+                },
+            },
+        ],
         [
             "vuepress-plugin-baidu-tongji", // 百度统计
             {
