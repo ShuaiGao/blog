@@ -15,7 +15,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     locales: {
         "/": {
             lang: "zh-CN",
-            title: "'s blog",
+            title: "子嘉的博客",
             description: "记录学习工作重要知识理论，执于笔下，记于心间，相信会越来越好！",
         },
     },
@@ -212,8 +212,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         // 博主信息 (显示在首页侧边栏)
         blogger: {
             avatar: "https://tyimage.tuyoo.com/8751a21462/img/lufei.jpg",
-            name: "子嘉",
-            slogan: "高子嘉",
+            name: "高子嘉",
+            slogan: "没有比脚更长的路，没有比人更高的山",
         },
 
         // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social)
@@ -241,13 +241,13 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         // 页脚信息
         footer: {
             createYear: 2022, // 博客创建年份
-            copyrightInfo: 'Dongua | <a href="https://github.com/ShuaiGao/shuaigao.github.io/main/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签或换行标签</br>
+            copyrightInfo: '子嘉 | <a href="https://github.com/ShuaiGao/shuaigao.github.io/main/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签或换行标签</br>
         },
 
         // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
         extendFrontmatter: {
             author: {
-                name: "Dongua",
+                name: "子嘉",
                 link: "https://github.com/ShuaiGao",
             },
         },
