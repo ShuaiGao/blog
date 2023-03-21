@@ -71,10 +71,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 text: "技术",
                 link: "/technology/",
                 items: [
-                    { text: "golang", link: "/golang/" },
-                    { text: "DB", link: "/db/" },
+                    // { text: "golang", link: "/golang/" },
+                    // { text: "DB", link: "/db/" },
                     // { text: "分布式", link: "/distributed/" },
-                    { text: "其他", link: "/server/" },
+                    // { text: "其他", link: "/server/" },
                     // { text: "技术文档", link: "/pages/9a7ee40fc232253e/" },
                     // { text: "GitHub技巧", link: "/pages/4c778760be26d8b3/" },
                     // { text: "Nodejs", link: "/pages/117708e0af7f0bd9/" },
