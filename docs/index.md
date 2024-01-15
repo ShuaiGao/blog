@@ -14,7 +14,7 @@ features: # 可选的
       imgUrl: /img/web.png # 可选
     - title: Go
       details: golang 相关技术
-      link: /ui/
+      link: /technology/
       imgUrl: /img/go-logo.png
     - title: 技术
       details: 技术文档、教程、技巧、总结等文章
